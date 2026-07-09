@@ -397,6 +397,14 @@ a { color: inherit; text-decoration: none; }
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.7));
 }
 .mask-svg { width: 100%; height: auto; }
+.mask-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(212,161,61,0.4);
+  box-shadow: 0 0 0 10px rgba(74,20,20,0.35), 0 0 60px rgba(168,22,22,0.35);
+}
 .killer-name { margin-bottom: 0.4rem; }
 .killer-quote {
   font-style: italic;
@@ -710,60 +718,7 @@ a { color: inherit; text-decoration: none; }
 <section id="killer" class="section killer reveal">
   <div class="section-inner killer-grid">
     <div class="killer-portrait">
-      <svg viewBox="0 0 400 480" class="mask-svg" aria-hidden="true">
-        <defs>
-          <radialGradient id="maskGlow" cx="50%" cy="32%" r="65%">
-            <stop offset="0%" stop-color="#4a1414"/>
-            <stop offset="100%" stop-color="#0a0000"/>
-          </radialGradient>
-          <linearGradient id="hatGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#2b2019"/>
-            <stop offset="100%" stop-color="#140e0a"/>
-          </linearGradient>
-        </defs>
-        <circle cx="200" cy="240" r="220" fill="url(#maskGlow)"/>
-
-        <!-- hat brim -->
-        <path d="M45 168 Q200 210 355 168 Q345 195 200 205 Q55 195 45 168 Z" fill="url(#hatGrad)" stroke="#3a271a" stroke-width="2"/>
-        <!-- hat crown -->
-        <path d="M118 168 Q120 78 200 68 Q280 78 282 168 Q200 148 118 168 Z" fill="url(#hatGrad)" stroke="#3a271a" stroke-width="2"/>
-        <path d="M150 100 Q200 84 250 100" stroke="#0a0705" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M160 165 Q200 150 240 165" stroke="#0a0705" stroke-width="3" fill="none"/>
-        <!-- hat band -->
-        <path d="M120 158 Q200 176 280 158 L280 170 Q200 188 120 170 Z" fill="#8a1414"/>
-        <circle cx="200" cy="164" r="7" fill="#d4a13d" stroke="#7a5a1e" stroke-width="1.5"/>
-
-        <!-- face / cracked mask -->
-        <path d="M124 205 Q120 300 155 365 Q200 405 245 365 Q280 300 276 205 Q200 190 124 205 Z" fill="#cbb896" stroke="#5b4632" stroke-width="3"/>
-        <!-- cracks -->
-        <path d="M175 200 L166 245 L182 280 L170 330" stroke="#7a6448" stroke-width="1.5" fill="none" opacity="0.7"/>
-        <path d="M232 208 L244 245 L230 285 L242 320" stroke="#7a6448" stroke-width="1.5" fill="none" opacity="0.7"/>
-
-        <!-- eyes -->
-        <path d="M148 250 Q168 236 190 250 Q168 261 148 250 Z" fill="#050000"/>
-        <path d="M210 250 Q232 236 252 250 Q232 261 210 250 Z" fill="#050000"/>
-        <circle cx="161" cy="250" r="3.5" fill="#c81d1d"/>
-        <circle cx="239" cy="250" r="3.5" fill="#c81d1d"/>
-        <path d="M140 244 Q168 228 196 244" stroke="#5b4632" stroke-width="2" fill="none"/>
-        <path d="M204 244 Q232 228 260 244" stroke="#5b4632" stroke-width="2" fill="none"/>
-
-        <!-- nose -->
-        <path d="M200 258 L191 298 Q200 308 209 298 Z" fill="#b8a583" stroke="#7a6448" stroke-width="1" opacity="0.8"/>
-
-        <!-- bandana mask over lower face -->
-        <path d="M112 288 Q200 275 288 288 L296 335 Q290 372 200 388 Q110 372 104 335 Z" fill="#7a1010" stroke="#3a0000" stroke-width="3"/>
-        <!-- bandana stars -->
-        <g fill="#e8e0c8" opacity="0.85">
-          <circle cx="150" cy="320" r="3.5"/>
-          <circle cx="175" cy="335" r="3.5"/>
-          <circle cx="200" cy="322" r="3.5"/>
-          <circle cx="225" cy="335" r="3.5"/>
-          <circle cx="250" cy="320" r="3.5"/>
-        </g>
-        <path d="M120 300 Q200 288 280 300" stroke="#3a0000" stroke-width="2" fill="none" opacity="0.6"/>
-        <!-- bandana side knot -->
-        <path d="M288 300 L318 292 L308 318 Z" fill="#7a1010" stroke="#3a0000" stroke-width="2"/>
-      </svg>
+      <img src="images/cowboy-patriot.jpg" alt="The Cowboy Patriot" class="mask-photo">
     </div>
     <div class="killer-copy">
       <p class="kicker">The Villain</p>
@@ -772,7 +727,7 @@ a { color: inherit; text-decoration: none; }
       <p>Once a nobody, now a nightmare stitched from old flags and older grievances. The Cowboy Patriot wears a cracked porcelain mask painted like a folk-art founding father, a duster cut from surplus canvas, and spurs that jingle a half-second before the screaming starts.</p>
       <p>He doesn't hunt for hunger. He hunts to educate — reciting fireworks-stand patriotism between gunshots and hatchet swings, convinced every kill is a lesson the ungrateful youth of America deserve. Underestimate his drawl. It's the last mistake most of them make.</p>
       <ul class="killer-facts">
-        <li><span>Weapon of Choice</span> Branding iron &amp; a pair of pearl-handled revolvers</li>
+        <li><span>Weapon of Choice</span> Baseball Bat &amp; Fireworks</li>
         <li><span>Signature</span> Leaves a scorched star on every victim</li>
         <li><span>Motive</span> "Un-American" behavior — his rules, his country</li>
       </ul>
