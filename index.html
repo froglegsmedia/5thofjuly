@@ -618,15 +618,34 @@ a { color: inherit; text-decoration: none; }
 }
 .loc-card {
   min-height: 220px;
+  border: 1px solid rgba(212,161,61,0.2);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s;
+}
+.loc-card:hover { transform: translateY(-4px); }
+.loc-card:hover .loc-photo { transform: scale(1.06); }
+.loc-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.loc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 75%);
+}
+.loc-content {
+  position: absolute;
+  inset: 0;
   padding: 1.4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border: 1px solid rgba(212,161,61,0.2);
-  position: relative;
-  transition: transform 0.25s;
 }
-.loc-card:hover { transform: translateY(-4px); }
 .loc-card h3 {
   font-family: 'Special Elite', 'Courier New', monospace;
   text-transform: uppercase;
@@ -662,7 +681,9 @@ a { color: inherit; text-decoration: none; }
 .footer-contact { margin-bottom: 1.6rem; font-size: 1.05rem; }
 .footer-contact a { color: var(--gold-bright); border-bottom: 1px solid transparent; }
 .footer-contact a:hover { border-color: var(--gold-bright); }
-.footer-copy { font-size: 0.75rem; opacity: 0.5; }
+.footer-copy { font-size: 0.75rem; opacity: 0.6; }
+.footer-copy a { color: var(--gold); opacity: 1; border-bottom: 1px solid transparent; }
+.footer-copy a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
@@ -777,7 +798,7 @@ a { color: inherit; text-decoration: none; }
 <section id="killer" class="section killer reveal">
   <div class="section-inner killer-grid">
     <div class="killer-portrait">
-      <img src="images/cowboy-patriot2.jpg" alt="The Cowboy Patriot" class="mask-photo">
+      <img src="images/cowboy-patriot.jpg" alt="The Cowboy Patriot" class="mask-photo">
     </div>
     <div class="killer-copy">
       <p class="kicker">The Villain</p>
@@ -786,7 +807,7 @@ a { color: inherit; text-decoration: none; }
       <p>Once a nobody, now a nightmare stitched from old flags and older grievances. The Cowboy Patriot wears a cracked porcelain mask painted like a folk-art founding father, a duster cut from surplus canvas, and spurs that jingle a half-second before the screaming starts.</p>
       <p>He doesn't hunt for hunger. He hunts to educate — reciting fireworks-stand patriotism between gunshots and hatchet swings, convinced every kill is a lesson the ungrateful youth of America deserve. Underestimate his drawl. It's the last mistake most of them make.</p>
       <ul class="killer-facts">
-        <li><span>Weapon of Choice</span> Baseball bat</li>
+        <li><span>Weapon of Choice</span> Branding iron &amp; a pair of pearl-handled revolvers</li>
         <li><span>Signature</span> Leaves a scorched star on every victim</li>
         <li><span>Motive</span> "Un-American" behavior — his rules, his country</li>
       </ul>
@@ -867,20 +888,36 @@ a { color: inherit; text-decoration: none; }
     <h2 class="section-title">Locations</h2>
     <div class="loc-grid">
       <div class="loc-card loc-cabin">
-        <h3>The Cabin</h3>
-        <p>Warm lights in a dark field — the last place that felt safe.</p>
+        <img src="images/loc-cabin.jpg" alt="The Cabin" class="loc-photo">
+        <div class="loc-overlay"></div>
+        <div class="loc-content">
+          <h3>The Cabin</h3>
+          <p>Warm lights in a dark field — the last place that felt safe.</p>
+        </div>
       </div>
       <div class="loc-card loc-woods">
-        <h3>The Woods</h3>
-        <p>Fog-choked pines where every snapped branch could be footsteps.</p>
+        <img src="images/loc-woods.jpg" alt="The Woods" class="loc-photo">
+        <div class="loc-overlay"></div>
+        <div class="loc-content">
+          <h3>The Woods</h3>
+          <p>Fog-choked pines where every snapped branch could be footsteps.</p>
+        </div>
       </div>
       <div class="loc-card loc-barn">
-        <h3>The Barn</h3>
-        <p>Rotting wood and rusted tools — nowhere left to hide.</p>
+        <img src="images/loc-barn.jpg" alt="The Barn" class="loc-photo">
+        <div class="loc-overlay"></div>
+        <div class="loc-content">
+          <h3>The Barn</h3>
+          <p>Rotting wood and rusted tools — nowhere left to hide.</p>
+        </div>
       </div>
       <div class="loc-card loc-highway">
-        <h3>The Highway</h3>
-        <p>One road out. He's already there, waiting in the headlights.</p>
+        <img src="images/loc-highway.jpg" alt="The Highway" class="loc-photo">
+        <div class="loc-overlay"></div>
+        <div class="loc-content">
+          <h3>The Highway</h3>
+          <p>One road out. He's already there, waiting in the headlights.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -898,7 +935,11 @@ a { color: inherit; text-decoration: none; }
       &nbsp;·&nbsp;
       <a href="tel:9857051628">985-705-1628</a>
     </p>
-    <p class="footer-copy">&copy; 2026 Scary Romantic. All rights reserved.</p>
+    <p class="footer-copy">
+      <a href="https://www.scaryromantic.com">www.scaryromantic.com</a>
+      &nbsp;·&nbsp;
+      &copy; 2026 Scary Romantic. All rights reserved.
+    </p>
   </div>
 </footer>
 
