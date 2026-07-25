@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>5TH OF JULY — A Patriotic Slasher</title>
 <meta name="description" content="This Independence Day, freedom isn't free. 5th of July — a patriotic slasher horror film. The Cowboy Patriot is watching.">
-
 <!-- Open Graph / iMessage, Facebook, Slack, etc. link preview -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://5thofjulymovie.com/">
@@ -14,17 +13,15 @@
 <meta property="og:image" content="https://5thofjulymovie.com/images/cowboy-patriot.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
-
 <!-- Twitter / X card (iMessage sometimes falls back to these) -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="5th of July — A Patriotic Slasher">
 <meta name="twitter:description" content="This Independence Day, freedom isn't free. The Cowboy Patriot is watching.">
 <meta name="twitter:image" content="https://5thofjulymovie.com/images/cowboy-patriot.jpg">
-
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Special+Elite&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Special+Elite&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root {
   --navy: #0b1220;
@@ -38,11 +35,8 @@
   --ink: #0a0806;
   font-size: 16px;
 }
-
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
   background: var(--ink);
@@ -52,9 +46,7 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-
 a { color: inherit; text-decoration: none; }
-
 /* ---------- Texture overlays ---------- */
 .grain-overlay {
   position: fixed;
@@ -65,7 +57,6 @@ a { color: inherit; text-decoration: none; }
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-
 .vignette {
   position: fixed;
   inset: 0;
@@ -73,7 +64,6 @@ a { color: inherit; text-decoration: none; }
   pointer-events: none;
   box-shadow: inset 0 0 18vw 2vw rgba(0,0,0,0.85);
 }
-
 /* ---------- Nav ---------- */
 .site-header {
   position: fixed;
@@ -82,7 +72,6 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(to bottom, rgba(6,10,18,0.9), transparent);
   padding: 0.6rem 0;
 }
-
 .nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -91,7 +80,6 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: space-between;
 }
-
 .nav-brand {
   font-family: 'Special Elite', 'Courier New', monospace;
   letter-spacing: 0.12em;
@@ -99,7 +87,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 1rem;
 }
 .nav-brand span { color: var(--red-bright); }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -107,7 +94,6 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
   padding: 0;
 }
-
 .nav-links a {
   font-family: 'Special Elite', 'Courier New', monospace;
   font-size: 0.78rem;
@@ -124,7 +110,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold-bright);
   border-color: var(--red-bright);
 }
-
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -140,7 +125,6 @@ a { color: inherit; text-decoration: none; }
   background: var(--gold-bright);
   display: block;
 }
-
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -151,14 +135,12 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   background: var(--navy-deep);
 }
-
 .flag-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   filter: saturate(0.6) brightness(0.55);
 }
-
 .flag-stripes {
   position: absolute;
   inset: 0;
@@ -169,7 +151,6 @@ a { color: inherit; text-decoration: none; }
   );
   animation: flagDrift 18s ease-in-out infinite alternate;
 }
-
 .flag-union {
   position: absolute;
   top: 0; left: 0;
@@ -178,7 +159,6 @@ a { color: inherit; text-decoration: none; }
   background: var(--navy);
   box-shadow: 4px 0 30px rgba(0,0,0,0.6);
 }
-
 .stars {
   position: absolute;
   inset: 0;
@@ -188,19 +168,16 @@ a { color: inherit; text-decoration: none; }
   background-position: 6.5% 8.3%;
   opacity: 0.85;
 }
-
 .flag-tear {
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 30% 20%, transparent 40%, rgba(0,0,0,0.75) 100%),
               linear-gradient(160deg, rgba(0,0,0,0.4), rgba(0,0,0,0.85) 80%);
 }
-
 @keyframes flagDrift {
   0% { transform: scale(1.02) translateX(0); }
   100% { transform: scale(1.06) translateX(-1.5%); }
 }
-
 .blood-drip-wrap {
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -209,7 +186,6 @@ a { color: inherit; text-decoration: none; }
   pointer-events: none;
 }
 .blood-drip { width: 100%; height: 100%; display: block; }
-
 .hero-content {
   position: relative;
   z-index: 3;
@@ -217,7 +193,6 @@ a { color: inherit; text-decoration: none; }
   padding: 2rem 1.5rem;
   max-width: 900px;
 }
-
 .eyebrow {
   font-family: 'Special Elite', 'Courier New', monospace;
   letter-spacing: 0.25em;
@@ -226,7 +201,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold);
   margin-bottom: 1rem;
 }
-
 .hero-title {
   font-family: 'Nosifer', 'Copperplate', 'Courier New', serif;
   font-weight: 400;
@@ -242,7 +216,6 @@ a { color: inherit; text-decoration: none; }
   animation: flicker 6s linear infinite;
 }
 .hero-title .ordinal { font-size: 0.4em; vertical-align: super; }
-
 @keyframes flicker {
   0%, 92%, 100% { opacity: 1; }
   93% { opacity: 0.75; }
@@ -250,7 +223,6 @@ a { color: inherit; text-decoration: none; }
   95% { opacity: 0.4; }
   96% { opacity: 1; }
 }
-
 .hero-genre {
   font-family: 'Special Elite', 'Courier New', monospace;
   letter-spacing: 0.3em;
@@ -260,7 +232,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.9rem;
   margin: 0.6rem 0 1.4rem;
 }
-
 .hero-tagline {
   font-style: italic;
   font-size: clamp(1.15rem, 2.4vw, 1.5rem);
@@ -269,14 +240,12 @@ a { color: inherit; text-decoration: none; }
   max-width: 640px;
   margin: 0 auto 2.2rem;
 }
-
 .hero-ctas {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .btn {
   display: inline-block;
   padding: 0.85rem 2rem;
@@ -294,13 +263,11 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 6px 24px rgba(168,22,22,0.35);
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,22,22,0.5); }
-
 .btn-ghost {
   border: 1px solid var(--gold);
   color: var(--gold-bright);
 }
 .btn-ghost:hover { background: rgba(212,161,61,0.1); transform: translateY(-2px); }
-
 .sound-toggle {
   position: absolute;
   bottom: 1.6rem;
@@ -317,7 +284,6 @@ a { color: inherit; text-decoration: none; }
   transition: background 0.2s;
 }
 .sound-toggle:hover { background: rgba(0,0,0,0.6); }
-
 .scroll-cue {
   position: absolute;
   bottom: 1.8rem;
@@ -338,18 +304,15 @@ a { color: inherit; text-decoration: none; }
   0%, 100% { transform: rotate(45deg) translate(0,0); opacity: 0.5; }
   50% { transform: rotate(45deg) translate(6px,6px); opacity: 1; }
 }
-
 /* ---------- Sections ---------- */
 .section {
   padding: 7rem 1.5rem;
   position: relative;
 }
-
 .section-inner {
   max-width: 1100px;
   margin: 0 auto;
 }
-
 .kicker {
   font-family: 'Special Elite', 'Courier New', monospace;
   letter-spacing: 0.25em;
@@ -358,7 +321,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.78rem;
   margin: 0 0 0.6rem;
 }
-
 .section-title {
   font-family: 'Nosifer', 'Copperplate', 'Courier New', serif;
   font-weight: 400;
@@ -371,7 +333,6 @@ a { color: inherit; text-decoration: none; }
 }
 .section-title .ordinal { font-size: 0.5em; vertical-align: super; }
 .accent { color: var(--red-bright); }
-
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -381,7 +342,6 @@ a { color: inherit; text-decoration: none; }
   opacity: 1;
   transform: translateY(0);
 }
-
 /* Poster */
 .poster {
   background: radial-gradient(ellipse at center, #1a0505 0%, var(--ink) 65%);
@@ -414,12 +374,12 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 640px) {
   .poster-img { width: 100%; max-width: 320px; }
 }
-
 /* Synopsis */
 .synopsis {
   background: radial-gradient(ellipse at top, #14060a 0%, var(--ink) 60%);
   border-top: 1px solid rgba(212,161,61,0.15);
 }
+.synopsis .section-title { text-align: center; }
 .plaque {
   background: rgba(0,0,0,0.35);
   border: 1px solid rgba(212,161,61,0.25);
@@ -427,10 +387,26 @@ a { color: inherit; text-decoration: none; }
   padding: 2rem 2.2rem;
   font-size: 1.2rem;
   line-height: 1.75;
+  text-align: center;
 }
 .plaque p { margin: 0 0 1.2rem; }
 .plaque p:last-child { margin-bottom: 0; }
-
+.logline-label {
+  font-family: 'Special Elite', 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: var(--gold);
+  margin-bottom: 1.2rem !important;
+}
+.synopsis-text {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  max-width: 760px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 /* Killer */
 .killer {
   background:
@@ -488,7 +464,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.1em;
   margin-bottom: 0.2rem;
 }
-
 /* Friends */
 .friends {
   background: var(--ink);
@@ -541,7 +516,6 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 0.8rem;
 }
 .cast-card p:last-child { font-size: 1.05rem; line-height: 1.6; opacity: 0.9; margin: 0; }
-
 /* Trailer */
 .trailer {
   background: radial-gradient(ellipse at bottom, #14060a 0%, var(--ink) 60%);
@@ -608,7 +582,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem;
   margin: 0;
 }
-
 /* Locations */
 .locations { background: var(--ink); }
 .loc-grid {
@@ -655,12 +628,10 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 0.4rem;
 }
 .loc-card p { font-size: 0.95rem; opacity: 0.85; margin: 0; line-height: 1.5; }
-
 .loc-cabin { background: radial-gradient(circle at 70% 80%, #5a3410 0%, #17100a 70%); }
 .loc-woods { background: linear-gradient(160deg, #0d1a14, #050805); }
 .loc-barn { background: linear-gradient(160deg, #2a1408, #100905); }
 .loc-highway { background: linear-gradient(160deg, #0a0a12, #050507), radial-gradient(circle at 80% 30%, rgba(240,194,101,0.25), transparent 40%); }
-
 /* Footer */
 .footer {
   position: relative;
@@ -684,7 +655,6 @@ a { color: inherit; text-decoration: none; }
 .footer-copy { font-size: 0.75rem; opacity: 0.6; }
 .footer-copy a { color: var(--gold); opacity: 1; border-bottom: 1px solid transparent; }
 .footer-copy a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .killer-grid { grid-template-columns: 1fr; text-align: center; }
@@ -693,7 +663,6 @@ a { color: inherit; text-decoration: none; }
   .cast-grid { grid-template-columns: repeat(2, 1fr); }
   .loc-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 640px) {
   .nav-links {
     position: absolute;
@@ -713,10 +682,8 @@ a { color: inherit; text-decoration: none; }
 </style>
 </head>
 <body>
-
 <div class="grain-overlay"></div>
 <div class="vignette"></div>
-
 <!-- NAV -->
 <header class="site-header">
   <nav class="nav">
@@ -735,7 +702,6 @@ a { color: inherit; text-decoration: none; }
     </ul>
   </nav>
 </header>
-
 <!-- HERO -->
 <section id="top" class="hero">
   <div class="flag-bg" aria-hidden="true">
@@ -745,13 +711,11 @@ a { color: inherit; text-decoration: none; }
     </div>
     <div class="flag-tear"></div>
   </div>
-
   <div class="blood-drip-wrap" aria-hidden="true">
     <svg class="blood-drip" viewBox="0 0 1200 220" preserveAspectRatio="none">
       <path d="M0,0 L1200,0 L1200,40 C1150,40 1140,110 1120,110 C1100,110 1095,55 1080,55 C1065,55 1060,150 1040,150 C1020,150 1018,60 1000,60 C982,60 978,190 958,190 C938,190 935,45 915,45 C895,45 892,95 872,95 C852,95 850,30 830,30 C810,30 808,130 788,130 C768,130 766,50 746,50 C726,50 722,170 702,170 C682,170 680,40 660,40 C640,40 636,80 616,80 C596,80 594,25 574,25 C554,25 550,140 530,140 C510,140 508,60 488,60 C468,60 465,100 445,100 C425,100 422,35 402,35 C382,35 378,120 358,120 C338,120 336,55 316,55 C296,55 292,90 272,90 C252,90 250,30 230,30 C210,30 206,105 186,105 C166,105 164,45 144,45 C124,45 120,75 100,75 C80,75 76,20 56,20 C36,20 30,60 0,60 Z" fill="#3a0000"/>
     </svg>
   </div>
-
   <div class="hero-content">
     <p class="eyebrow">Independence Day Will Never Be The Same</p>
     <h1 class="hero-title">5<span class="ordinal">th</span> of July</h1>
@@ -762,16 +726,13 @@ a { color: inherit; text-decoration: none; }
       <a href="#synopsis" class="btn btn-ghost">Learn the Story</a>
     </div>
   </div>
-
   <button class="sound-toggle" id="soundToggle" title="Toggle ambient drone">
     <span class="sound-icon">🔇</span>
   </button>
-
   <a href="#synopsis" class="scroll-cue" aria-label="Scroll down">
     <span></span>
   </a>
 </section>
-
 <!-- POSTER -->
 <section id="poster" class="section poster reveal">
   <div class="section-inner poster-inner">
@@ -780,22 +741,21 @@ a { color: inherit; text-decoration: none; }
     </div>
   </div>
 </section>
-
 <!-- SYNOPSIS -->
 <section id="synopsis" class="section synopsis reveal">
   <div class="section-inner">
     <p class="kicker">Horror / Thriller</p>
     <h2 class="section-title">The Fourth Ended. <span class="accent">He Didn't.</span></h2>
     <div class="plaque">
-      <p>Logline:</p>
-      <p>Seven graduates chasing one last summer high get hunted by a masked zealot who turns their Fourth of July bonfire into a blood-soaked lesson in liberty, leather, and lead.</p>
-      <p>A group of newly graduated friends head to a remote cabin to celebrate their last free summer before real life begins. What starts as fireworks and bonfires curdles into a bloodbath when they draw the attention of a masked killer known only as <strong>the Cowboy Patriot</strong> — a nationalist zealot who dresses the American dream in leather, gunpowder, and old glory.</p>
-      <p>He doesn't just want them dead. He wants to teach them a lesson about freedom — and he intends to make every one of them pay for taking it for granted.</p>
-      <p>One by one, the friends are hunted through cabin, barn, and backwoods highway in a deadly game of survival. The survivors must out-think a killer who quotes the founding fathers between kills — before the sun rises on a 5th of July none of them will live to remember.</p>
+      <p class="logline-label">Logline:</p>
+      <p class="synopsis-text">Seven graduates chasing one last summer high get hunted by a masked zealot who turns their Fourth of July bonfire into a blood-soaked lesson in liberty, leather, and lead.</p>
+      <p class="logline-label">Synopsis:</p>
+      <p class="synopsis-text">A group of newly graduated friends head to a remote cabin to celebrate their last free summer before real life begins. What starts as fireworks and bonfires curdles into a bloodbath when they draw the attention of a masked killer known only as <strong>the Cowboy Patriot</strong> — a nationalist zealot who dresses the American dream in leather, gunpowder, and old glory.</p>
+      <p class="synopsis-text">He doesn't just want them dead. He wants to teach them a lesson about freedom — and he intends to make every one of them pay for taking it for granted.</p>
+      <p class="synopsis-text">One by one, the friends are hunted through cabin, barn, and backwoods highway in a deadly game of survival. The survivors must out-think a killer who quotes the founding fathers between kills — before the sun rises on a 5th of July none of them will live to remember.</p>
     </div>
   </div>
 </section>
-
 <!-- KILLER -->
 <section id="killer" class="section killer reveal">
   <div class="section-inner killer-grid">
@@ -810,79 +770,68 @@ a { color: inherit; text-decoration: none; }
       <p>He doesn't hunt for hunger. He hunts to educate — reciting fireworks-stand patriotism between gunshots and hatchet swings, convinced every kill is a lesson the ungrateful youth of America deserve. Underestimate his drawl. It's the last mistake most of them make.</p>
       <ul class="killer-facts">
         <li><span>Weapon of Choice</span> Baseball bat</li>
-        <li><span>Signature</span> Puts on a fireworks show</li>
+        <li><span>Signature</span> Leaves cryptic riddles about the American Dream</li>
         <li><span>Motive</span> "Un-American" behavior — his rules, his country</li>
       </ul>
     </div>
   </div>
 </section>
-
 <!-- FRIENDS -->
 <section id="friends" class="section friends reveal">
   <div class="section-inner">
     <p class="kicker">Who's Invited to the Cabin</p>
     <h2 class="section-title">The Friends</h2>
     <div class="cast-grid">
-
       <article class="cast-card">
         <div class="cast-monogram">C</div>
         <h3>Caroline</h3>
         <p class="cast-role">The Cheerleader</p>
         <p>Confident, outgoing, sometimes shallow — starts self-absorbed but finds her spine fighting to survive the night.</p>
       </article>
-
       <article class="cast-card">
         <div class="cast-monogram">H</div>
         <h3>Harper</h3>
         <p class="cast-role">The Influencer</p>
         <p>Social-media obsessed and vain, chasing the shot instead of the exit. Underestimates real danger until it's far too late.</p>
       </article>
-
       <article class="cast-card">
         <div class="cast-monogram">D</div>
         <h3>Danny</h3>
         <p class="cast-role">The Quarterback</p>
         <p>Cocky but loyal, and fiercely protective of his friends — though his arrogance keeps putting him right in harm's way.</p>
       </article>
-
       <article class="cast-card">
         <div class="cast-monogram">J</div>
         <h3>John</h3>
         <p class="cast-role">The Stoner</p>
         <p>Carefree, reckless, and always a beat behind. His habits make him an easy mark once the mask comes out of the dark.</p>
       </article>
-
       <article class="cast-card">
         <div class="cast-monogram">S</div>
         <h3>Sally</h3>
         <p class="cast-role">The Outsider</p>
         <p>Overlooked by the popular crowd, but resourceful and brave when it counts most — maybe the only one built to make it out.</p>
       </article>
-
       <article class="cast-card">
         <div class="cast-monogram">M</div>
         <h3>Melvin</h3>
         <p class="cast-role">The Conspiracist</p>
         <p>A socially awkward outcast with extreme beliefs and an old grudge against the popular kids. Possibly the killer. Possibly worse.</p>
       </article>
-
     </div>
   </div>
 </section>
-
 <!-- TRAILER -->
 <section id="trailer" class="section trailer reveal">
   <div class="section-inner">
     <p class="kicker">Coming This Independence Day</p>
     <h2 class="section-title">Watch the Teaser</h2>
-
     <div class="video-frame">
       <iframe src="https://www.youtube.com/embed/qtCFGixbTeY" title="5th of July Trailer"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </section>
-
 <!-- LOCATIONS -->
 <section id="locations" class="section locations reveal">
   <div class="section-inner">
@@ -924,7 +873,6 @@ a { color: inherit; text-decoration: none; }
     </div>
   </div>
 </section>
-
 <!-- FOOTER / CONTACT -->
 <footer id="contact" class="footer">
   <div class="footer-flag-strip" aria-hidden="true"></div>
@@ -938,13 +886,12 @@ a { color: inherit; text-decoration: none; }
       <a href="tel:9857051628">985-705-1628</a>
     </p>
     <p class="footer-copy">
-      <a href="https://www.scaryromantic.com">www.scaryromantic.com</a>
+      <a href="https://www.scaryromantic.com">[www.scaryromantic.com](https://www.scaryromantic.com)</a>
       &nbsp;·&nbsp;
       &copy; 2026 Scary Romantic. All rights reserved.
     </p>
   </div>
 </footer>
-
 <script>
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
@@ -955,7 +902,6 @@ navToggle.addEventListener('click', () => {
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('is-open'));
 });
-
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
@@ -967,7 +913,6 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 revealEls.forEach(el => io.observe(el));
-
 // Trailer placeholder click -> gentle shake, since there's no real video yet
 const videoPlaceholder = document.getElementById('videoPlaceholder');
 if (videoPlaceholder) {
@@ -978,45 +923,35 @@ if (videoPlaceholder) {
     setTimeout(() => { videoPlaceholder.style.transform = 'translateX(0)'; }, 160);
   });
 }
-
 // Ambient drone toggle (synthesized, no external audio file needed)
 const soundToggle = document.getElementById('soundToggle');
 let audioCtx = null;
 let droneNodes = null;
 let isPlaying = false;
-
 function startDrone() {
   audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
   const master = audioCtx.createGain();
   master.gain.value = 0.05;
   master.connect(audioCtx.destination);
-
   const osc1 = audioCtx.createOscillator();
   osc1.type = 'sine';
   osc1.frequency.value = 55;
-
   const osc2 = audioCtx.createOscillator();
   osc2.type = 'sine';
   osc2.frequency.value = 58;
-
   const lfo = audioCtx.createOscillator();
   lfo.frequency.value = 0.15;
   const lfoGain = audioCtx.createGain();
   lfoGain.gain.value = 0.02;
   lfo.connect(lfoGain);
   lfoGain.connect(master.gain);
-
   osc1.connect(master);
   osc2.connect(master);
-
   osc1.start();
   osc2.start();
   lfo.start();
-
   droneNodes = { osc1, osc2, lfo, master };
 }
-
 function stopDrone() {
   if (!droneNodes) return;
   droneNodes.osc1.stop();
@@ -1025,7 +960,6 @@ function stopDrone() {
   audioCtx.close();
   droneNodes = null;
 }
-
 soundToggle.addEventListener('click', () => {
   isPlaying = !isPlaying;
   soundToggle.querySelector('.sound-icon').textContent = isPlaying ? '🔊' : '🔇';
